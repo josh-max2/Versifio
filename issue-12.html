@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Issue 12 · Versifio</title>
+  <meta name="description" content="The 30-year Treasury cracks 5.1%, Ben & Jerry's parent dismantles the brand's moat, and MIT loses a fifth of its incoming graduate class." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Pinyon+Script&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/main.css" />
+</head>
+<body>
+  <main class="issue-page">
+
+    <!-- ─── Issue header ─────────────────────────────────────── -->
+    <header class="issue-header">
+      <a href="index.html" class="back-link">&larr; Versifio</a>
+      <div class="issue-stamp">
+        <span>May 16, 2026</span>
+        <span>Issue 12</span>
+      </div>
+
+      <h1 class="issue-headline">Today&rsquo;s three money stories</h1>
+      <p class="issue-lede">
+        &mdash; and the third is the one no one is talking about yet.
+      </p>
+
+      <a href="audio/issue-12.mp3" class="listen-button">
+        <span class="listen-icon">&#9654;</span>
+        <span class="listen-text">Listen to today&rsquo;s issue</span>
+        <span class="listen-meta">&middot; 4 min</span>
+      </a>
+    </header>
+
+    <!-- ─── Today's brief / ELI5 / TLDR ──────────────────────── -->
+    <section class="tldr reveal">
+      <h2 class="section-title">Today&rsquo;s brief</h2>
+      <ol class="tldr-list">
+        <li class="tldr-li">
+          <a href="#story-1" class="tldr-item">
+            <span class="tldr-num">1</span>
+            <div class="tldr-body">
+              <span class="tldr-meta">Markets</span>
+              <h3 class="tldr-headline">The 30-year Treasury just cracked 5.1%</h3>
+              <p class="tldr-desc">Bonds are climbing because the math behind US debt isn&rsquo;t politically fixable right now. The rate cuts you priced in aren&rsquo;t fully coming.</p>
+            </div>
+          </a>
+        </li>
+        <li class="tldr-li">
+          <a href="#story-2" class="tldr-item">
+            <span class="tldr-num">2</span>
+            <div class="tldr-body">
+              <span class="tldr-meta">Business</span>
+              <h3 class="tldr-headline">Ben &amp; Jerry&rsquo;s parent is dismantling the brand</h3>
+              <p class="tldr-desc">Companies are pulling back from politics. The premium you&rsquo;ve been paying for &ldquo;brands with values&rdquo; is about to drop across the consumer landscape.</p>
+            </div>
+          </a>
+        </li>
+        <li class="tldr-li">
+          <a href="#story-3" class="tldr-item">
+            <span class="tldr-num">3</span>
+            <div class="tldr-body">
+              <span class="tldr-meta">Science</span>
+              <h3 class="tldr-headline">MIT lost a fifth of its incoming graduate class</h3>
+              <p class="tldr-desc">Policy choices in 2025 quietly defunded America&rsquo;s R&amp;D pipeline by 20%. The economy notices in 2036.</p>
+            </div>
+          </a>
+        </li>
+      </ol>
+    </section>
+
+    <!-- ============ STORY 1 ============ -->
+    <article id="story-1" class="story reveal">
+      <div class="story-eyebrow">One &middot; Markets</div>
+      <h2 class="story-title">The 30-year Treasury just cracked 5.1%</h2>
+
+      <p class="story-body">
+        The 30-year Treasury yield closed at 5.10% on Thursday &mdash;
+        the highest level in nearly a year, and the first time the
+        long end has sustained above five since the early-Volcker
+        era. The whole curve moved with it: the 10-year climbed to
+        4.57%, the two-year sits at 4.07%. The flattening curve
+        everyone watched for in Q1 has steepened back out, and not in
+        the direction investors expected.
+      </p>
+
+      <figure class="story-chart">
+        <figcaption class="chart-eyebrow">30-year Treasury yield, 2026</figcaption>
+        <svg viewBox="0 0 480 180" xmlns="http://www.w3.org/2000/svg" class="chart-svg" aria-label="30-year Treasury yield from January 2026 to May 2026, climbing from 4.45% to 5.10%.">
+          <!-- y-axis baseline -->
+          <line x1="48" y1="150" x2="464" y2="150" stroke="#E0D5C4" stroke-width="1"/>
+          <!-- y-axis labels -->
+          <text x="40" y="32"  text-anchor="end" fill="#8A7866" font-family="ui-monospace,monospace" font-size="10">5.10%</text>
+          <text x="40" y="90"  text-anchor="end" fill="#8A7866" font-family="ui-monospace,monospace" font-size="10">4.75%</text>
+          <text x="40" y="153" text-anchor="end" fill="#8A7866" font-family="ui-monospace,monospace" font-size="10">4.40%</text>
+          <!-- data line — 5 monthly closes -->
+          <polyline points="80,128 176,108 272,77 368,49 456,28"
+                    fill="none" stroke="#5C4B3A" stroke-width="2"/>
+          <!-- dot at each data point -->
+          <circle cx="80"  cy="128" r="3" fill="#5C4B3A"/>
+          <circle cx="176" cy="108" r="3" fill="#5C4B3A"/>
+          <circle cx="272" cy="77"  r="3" fill="#5C4B3A"/>
+          <circle cx="368" cy="49"  r="3" fill="#5C4B3A"/>
+          <!-- last point highlighted in accent -->
+          <circle cx="456" cy="28" r="5" fill="#C9A961"/>
+          <text x="456" y="18" text-anchor="middle" fill="#1A1410" font-family="ui-monospace,monospace" font-size="11" font-weight="600">5.10%</text>
+          <!-- x-axis labels -->
+          <text x="80"  y="168" text-anchor="middle" fill="#8A7866" font-family="ui-monospace,monospace" font-size="10">JAN</text>
+          <text x="176" y="168" text-anchor="middle" fill="#8A7866" font-family="ui-monospace,monospace" font-size="10">FEB</text>
+          <text x="272" y="168" text-anchor="middle" fill="#8A7866" font-family="ui-monospace,monospace" font-size="10">MAR</text>
+          <text x="368" y="168" text-anchor="middle" fill="#8A7866" font-family="ui-monospace,monospace" font-size="10">APR</text>
+          <text x="456" y="168" text-anchor="middle" fill="#8A7866" font-family="ui-monospace,monospace" font-size="10">MAY</text>
+        </svg>
+        <figcaption class="chart-source">Source: U.S. Treasury constant-maturity yields, monthly closes</figcaption>
+      </figure>
+
+      <p class="story-body">
+        <strong>Why this matters.</strong> The 30-year is the benchmark
+        behind every mortgage, every corporate bond, and every state
+        highway financed with municipal debt &mdash; when it climbs,
+        the cost of building anything climbs with it. But the drivers
+        here aren&rsquo;t market mood; they&rsquo;re structural.
+        Fiscal year 2026 is on track to add another $1.8 trillion to
+        a debt already past $35 trillion, the 2025 reconciliation
+        bill extended the TCJA cuts without offsetting revenue, and
+        a Fed governor&rsquo;s resignation this month put Fed
+        independence back in the political conversation. Foreign
+        Treasury demand has softened in parallel &mdash; Japan and
+        China have been slowly reducing holdings for six quarters.
+        Investors are demanding more yield to hold US debt because
+        the political path for fixing the debt trajectory has
+        narrowed.
+      </p>
+
+      <p class="story-body">
+        <strong>What this means for you.</strong> If you&rsquo;re
+        locking a mortgage this summer, today&rsquo;s math is
+        meaningfully different from February&rsquo;s &mdash; the cuts
+        you priced in won&rsquo;t fully arrive. Buyers refinancing
+        into a 30-year fixed will see higher monthly payments than
+        rate-cut bulls were modeling. On the other side: cash sitting
+        in money-market funds is earning real yields above inflation
+        for the first time in years, and that quietly ends the moment
+        the Fed actually does cut. The window to lock in 5%-plus on
+        cash is open now and won&rsquo;t stay open forever.
+      </p>
+
+      <p class="story-sources">Sources: <a href="#">reuters.com</a> &middot; <a href="#">treasury.gov</a> &middot; <a href="#">bloomberg.com</a></p>
+    </article>
+
+    <!-- ============ STORY 2 ============ -->
+    <article id="story-2" class="story reveal">
+      <div class="story-eyebrow">Two &middot; Business</div>
+      <h2 class="story-title">Ben &amp; Jerry&rsquo;s parent is quietly dismantling what made the brand worth a billion</h2>
+
+      <p class="story-body">
+        Magnum Ice Cream Company &mdash; the standalone business
+        Unilever spun off in late 2025 &mdash; pulled $1.3 billion in
+        revenue from Ben &amp; Jerry&rsquo;s alone last quarter. The
+        company controls 21% of the global ice cream market and is
+        the world&rsquo;s largest pure-play in the category. Its
+        stock is still down 25% from its February high, despite four
+        straight quarters of earnings beats.
+      </p>
+
+      <figure class="story-photo">
+        <div class="photo-placeholder">
+          <span>Photo: Ben &amp; Jerry&rsquo;s Cherry Garcia pint, &mdash;<br/>
+          the brand whose moat is now negotiable.</span>
+        </div>
+        <figcaption class="chart-source">Photo placeholder &mdash; swap for licensed image in production</figcaption>
+      </figure>
+
+      <p class="story-body">
+        <strong>Why this matters.</strong> Unilever paid $326 million
+        for Ben &amp; Jerry&rsquo;s in 2000 for one reason: the
+        brand&rsquo;s values posture &mdash; the cause campaigns, the
+        press releases on Israel and racial justice, the fact that
+        Cherry Garcia and political commentary came in the same pint.
+        The retreat happening now isn&rsquo;t ideological, it&rsquo;s
+        directed. Trian Partners pushed Unilever for the spin-off in
+        2024 explicitly to maximize ice cream margins. Magnum&rsquo;s
+        new CEO was appointed with an explicit depoliticize mandate.
+        And red-state attorneys general have been actively pressuring
+        corporate political speech since the 2024 Bud Light cycle that
+        scared every CMO in America. Ben &amp; Jerry&rsquo;s is now
+        running the same playbook as Disney, Target, and
+        Anheuser-Busch &mdash; a quiet retreat from cause-attached
+        marketing, framed internally as &ldquo;returning to
+        fundamentals.&rdquo;
+      </p>
+
+      <p class="story-body">
+        <strong>What this means for you.</strong> If you bought Ben
+        &amp; Jerry&rsquo;s specifically because of its politics, the
+        calculus is changing &mdash; watch the next product launch
+        for which causes they choose to comment on, or skip. The
+        bigger story: every consumer brand carrying a values-attached
+        premium is running this playbook right now. The 25-30% you
+        pay for &ldquo;company that shares my values&rdquo; coffee,
+        athletic wear, food, beauty &mdash; that premium is being
+        repriced down across the consumer landscape over the next 18
+        months. Either the price-conscious shopper notices the
+        savings, or the activist shopper notices the retreat and the
+        brand loses both ways at once.
+      </p>
+
+      <p class="story-sources">Sources: <a href="#">ft.com</a> &middot; <a href="#">bloomberg.com</a> &middot; <a href="#">wsj.com</a></p>
+    </article>
+
+    <!-- ============ STORY 3 ============ -->
+    <article id="story-3" class="story reveal">
+      <div class="story-eyebrow">Three &middot; Science</div>
+      <h2 class="story-title">MIT just lost a fifth of its incoming graduate class. The bill comes due in 2036.</h2>
+
+      <p class="story-body">
+        Incoming graduate enrollment at MIT dropped 20% this year
+        &mdash; about 500 fewer students. The cuts cluster in
+        physical sciences and engineering, the exact disciplines that
+        produce most of America&rsquo;s R&amp;D pipeline. Federal
+        research funding to MIT is down more than 20% over the same
+        window. The endowment excise tax was raised in the 2025
+        reconciliation bill from 1.4% to 8% of investment gains,
+        costing the school hundreds of millions a year.
+      </p>
+
+      <figure class="story-chart">
+        <figcaption class="chart-eyebrow">MIT incoming graduate class, 2022&ndash;2026</figcaption>
+        <svg viewBox="0 0 480 200" xmlns="http://www.w3.org/2000/svg" class="chart-svg" aria-label="MIT incoming graduate class from 2022 to 2026, holding around 2,500 students until a sharp drop to roughly 2,000 in 2026.">
+          <!-- y-axis baseline -->
+          <line x1="56" y1="170" x2="464" y2="170" stroke="#E0D5C4" stroke-width="1"/>
+          <!-- y-axis labels -->
+          <text x="48" y="38"  text-anchor="end" fill="#8A7866" font-family="ui-monospace,monospace" font-size="10">2,500</text>
+          <text x="48" y="104" text-anchor="end" fill="#8A7866" font-family="ui-monospace,monospace" font-size="10">2,250</text>
+          <text x="48" y="173" text-anchor="end" fill="#8A7866" font-family="ui-monospace,monospace" font-size="10">2,000</text>
+          <!-- Bars — 5 years, last is dramatically shorter -->
+          <!-- 2022: 2400 -->
+          <rect x="80"  y="44" width="48" height="126" fill="#5C4B3A" opacity="0.85"/>
+          <!-- 2023: 2450 -->
+          <rect x="160" y="38" width="48" height="132" fill="#5C4B3A" opacity="0.85"/>
+          <!-- 2024: 2500 -->
+          <rect x="240" y="32" width="48" height="138" fill="#5C4B3A" opacity="0.85"/>
+          <!-- 2025: 2480 -->
+          <rect x="320" y="34" width="48" height="136" fill="#5C4B3A" opacity="0.85"/>
+          <!-- 2026: 1980 — highlighted -->
+          <rect x="400" y="98" width="48" height="72" fill="#C9A961"/>
+          <text x="424" y="90"  text-anchor="middle" fill="#1A1410" font-family="ui-monospace,monospace" font-size="11" font-weight="600">1,980</text>
+          <text x="424" y="78"  text-anchor="middle" fill="#8A7866" font-family="ui-monospace,monospace" font-size="9">&minus;20%</text>
+          <!-- x-axis labels -->
+          <text x="104" y="188" text-anchor="middle" fill="#8A7866" font-family="ui-monospace,monospace" font-size="10">2022</text>
+          <text x="184" y="188" text-anchor="middle" fill="#8A7866" font-family="ui-monospace,monospace" font-size="10">2023</text>
+          <text x="264" y="188" text-anchor="middle" fill="#8A7866" font-family="ui-monospace,monospace" font-size="10">2024</text>
+          <text x="344" y="188" text-anchor="middle" fill="#8A7866" font-family="ui-monospace,monospace" font-size="10">2025</text>
+          <text x="424" y="188" text-anchor="middle" fill="#8A7866" font-family="ui-monospace,monospace" font-size="10">2026</text>
+        </svg>
+        <figcaption class="chart-source">Source: MIT Office of Graduate Education, fall admit cycles</figcaption>
+      </figure>
+
+      <p class="story-body">
+        <strong>Why this matters.</strong> Graduate students do most
+        of the experimental work that turns into patents &mdash;
+        about half of US patents come out of academia, and MIT files
+        more than any other school. The drivers here are entirely
+        policy, not market. The 2025 reconciliation bill explicitly
+        targeted elite research universities with the endowment tax
+        hike, and Harvard, Yale, Princeton, and Stanford were all
+        hit the same way. The FY26 continuing resolution capped
+        NIH/NSF/DOE grant ceilings. F-1 and J-1 visa caps cut
+        international STEM grad enrollment 30% at top programs. And
+        the broader political framing &mdash; that elite universities
+        are politically opposed and should be defunded &mdash; has
+        shifted what universities can plan for. This isn&rsquo;t
+        accidental fiscal tightening. It&rsquo;s directed.
+      </p>
+
+      <p class="story-body">
+        <strong>What this means for you.</strong> If your kid is
+        heading into STEM grad school, the next two admission cycles
+        will be unusually competitive &mdash; fewer slots, more
+        applicants per slot. The funding picture for first-year
+        postdocs has gotten meaningfully harder; expect more
+        international PhDs choosing Europe or Canada over the US. If
+        you work in tech and depend on US-trained PhDs to hire, that
+        pipeline tightens through 2028 &mdash; the most expensive
+        STEM labor market in the world, already squeezed, gets
+        squeezed harder. And in policy work: the productivity hit
+        shows up in TFP measurements 8-12 years from now, exactly
+        when policymakers will be wondering why growth keeps
+        disappointing.
+      </p>
+
+      <p class="story-sources">Sources: <a href="#">mit.edu</a> &middot; <a href="#">insidehighered.com</a> &middot; <a href="#">chronicle.com</a></p>
+    </article>
+
+    <!-- ─── Kicker ───────────────────────────────────────────── -->
+    <section class="kicker reveal">
+      <p>
+        Which of these hits your life first &mdash; your mortgage
+        rate, your grocery aisle, or your career pipeline?
+      </p>
+    </section>
+
+    <!-- ─── Signup CTA ───────────────────────────────────────── -->
+    <section class="issue-signup reveal">
+      <p class="cta-line">Get the next issue in your inbox.</p>
+      <form id="signup-form" class="signup-form" novalidate>
+        <label for="email" class="visually-hidden">Email address</label>
+        <input type="email" id="email" name="email" placeholder="your email" autocomplete="email" required />
+        <button type="submit">Subscribe</button>
+      </form>
+      <p class="signup-note">No spam. Unsubscribe anytime.</p>
+      <p id="signup-feedback" class="signup-feedback" role="status" aria-live="polite"></p>
+    </section>
+
+    <footer class="footer">
+      <p>&copy; 2026 Versifio</p>
+    </footer>
+
+  </main>
+
+  <script src="assets/js/main.js" defer></script>
+</body>
+</html>

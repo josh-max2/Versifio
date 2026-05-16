@@ -137,6 +137,125 @@ the URL should be `https://josh-max2.github.io/Versifio/?utm_source=<channel>&ut
 (swap to `https://versif.io/...` if/when the custom domain is wired
 up) so each channel's funnel is measurable in dashboard analytics.
 
+## Issue page anatomy
+
+```
+Hero          ─ wordmark + tagline + date stamp
+Headline      ─ issue title + italic lede
+Listen button ─ links to /audio/issue-N.mp3
+
+Today's brief ─ TLDR / ELI5 (NEW — added 2026-05-16)
+   3 numbered entries, each:
+     · vertical eyebrow (Markets / Business / etc.)
+     · headline (matches the full story below)
+     · ELI5 one-sentence description
+     · entire entry is a link → smooth-scrolls to #story-N anchor
+
+[3 full stories below, each with the three-beat structure]
+
+Kicker        ─ closing question
+Signup CTA    ─ subscribe form
+Footer        ─ copyright
+```
+
+The TLDR section is load-bearing for two reasons: (1) it gives skim-
+reading subscribers the full takeaway in 15 seconds without forcing
+them to read the long-form below; (2) it works as a within-issue nav
+via anchor links — readers can jump straight to the vertical they care
+about most. Smooth-scroll behavior on `<html>` makes this feel native.
+
+ELI5 descriptions should be **one sentence, ~15-25 words, plain
+language**. The goal: capture the "so what" in language that
+doesn't require any prior context. Examples from issue 12:
+
+```
+Bonds are climbing because the math behind US debt isn't politically
+fixable right now. The rate cuts you priced in aren't fully coming.
+
+Companies are pulling back from politics. The premium you've been
+paying for "brands with values" is about to drop across the
+consumer landscape.
+
+Policy choices in 2025 quietly defunded America's R&D pipeline by
+20%. The economy notices in 2036.
+```
+
+The TLDR is the part most subscribers will read. The long-form below
+is for the readers who decide one story matters enough to read fully.
+Design the editorial accordingly.
+
+## Editorial structure — the three-beat story
+
+Every story on an issue page (and in every newsletter issue) follows
+this three-paragraph rhythm. This is the editorial contract that
+separates Versifio from wire-service rehashing.
+
+```
+Paragraph 1 — WHAT HAPPENED
+  The news. Facts, numbers, who/when/where. Wire-service prose.
+  ~80-100 words. No analysis here; just the event.
+
+Paragraph 2 — WHY THIS MATTERS  (the curation layer)
+  Lead with bold "Why this matters."
+  Two beats inside this paragraph:
+    1. Mechanism — what this event is part of structurally
+       (e.g., "the 30-yr is the benchmark for every mortgage")
+    2. Drivers — name the political / policy / structural causes
+       that produced this event. NOT "markets moved" — explain
+       the system that moved them.
+       Examples: reconciliation bills, executive orders, activist
+       investors, CEO mandates, AG pressure, regulatory shifts.
+  ~120-140 words. This is where the editorial value lives.
+
+Paragraph 3 — WHAT THIS MEANS FOR YOU
+  Lead with bold "What this means for you."
+  Predictive but conditional — never date-or-price-specific.
+  Speak directly to a 25-44 professional making decisions.
+  Anchor to concrete domains:
+    - your mortgage / your savings / your retirement
+    - your career / your kids' education
+    - your industry / your employer
+    - your investments / your debt
+  ~80-100 words.
+  Good: "If you're locking a mortgage this summer..."
+  Bad:  "Mortgage rates will hit 8% by Q3."
+```
+
+The middle paragraph is the load-bearing one. It's the difference
+between "we summarize the news" (every newsletter) and "we explain
+the system that produced the news" (Versifio's wedge). Lean into
+naming political/policy drivers explicitly &mdash; reconciliation
+bills, activist investors, regulatory shifts, executive policy.
+
+## Vertical scope
+
+Versifio covers four verticals, all aligned to a 25-44 professional
+reader trying to understand the next decade:
+
+- **Economics** &mdash; macro, markets, monetary policy
+- **Political Economy** &mdash; fiscal/trade/tariff/energy/regulation
+- **Technology** &mdash; AI, semis, valuations, infrastructure
+- **Science** &mdash; research, funding, breakthroughs
+
+Sports is intentionally OUT of scope. The @GridIronCourt brand
+remains a separate publication if it ever gets a newsletter
+counterpart &mdash; sports has its own voice, cadence, sponsor
+economics, and reader cohort that doesn't fit the 25-44 professional
+brief tone.
+
+## Audience
+
+Predominantly 25-44 professionals (per @ander__all, @crash_magnet,
+@gridironcourt TT + YT Creator Studio analytics, roughly 80% of
+viewers in this range). Median household income estimated $80-120K.
+Decision-makers in their highest-earning years: first house, kids'
+education, career pivot, portfolio's next decade.
+
+**Use this in:** sponsor decks, press kit, about page (subtle line).
+**Do NOT use this in:** landing-page hero copy (reads as marketed).
+Let the writing target the demo &mdash; if the prose is written for
+this reader, the reader recognizes themselves without being told.
+
 ## Decisions log
 
 - **2026-05-16** — repo created, scaffold + spec shipped. Beige
@@ -154,3 +273,22 @@ up) so each channel's funnel is measurable in dashboard analytics.
   `.section-title` class. Placeholder issue copy uses real
   brand-vertical topics (wheat/Boeing/Fed) so the voice calibration
   is correct when real issues replace it.
+- **2026-05-16 (still later)** — `issue-12.html` shipped as the
+  prototype issue-archive page. Wider container (720px), per-story
+  chart/photo affordance, three-beat editorial structure (news →
+  why-this-matters-with-causes → what-this-means-for-you). SVG charts
+  hand-built for stories 1 and 3 (Treasury yield line, MIT enrollment
+  bars); story 2 has a photo placeholder. Vertical scope clarified:
+  Econ / Poli-Econ / Tech / Science &mdash; Sports out of scope for
+  Versifio. Audience demographic (25-44 professional) documented for
+  sponsor-deck use; explicitly NOT for landing-page copy.
+- **2026-05-16 (latest)** — TLDR / "Today's brief" section added to
+  issue page above the long-form stories. Three entries with
+  vertical eyebrow + headline + ELI5 one-sentence description; each
+  entry is a smooth-scroll anchor link to its full story below
+  (`#story-1`, `#story-2`, `#story-3`). Smooth-scroll behavior set
+  on `<html>` with reduced-motion fallback. `INSTRUCTIONS.md`
+  created as the sequential build plan (8 phases, phases 1-3 are
+  static-only and can ship now; phases 4+ defer until ESP is wired).
+  Topic-filter on signup, vertical scope, paid-tier sequencing, and
+  every operational gate documented.

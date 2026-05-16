@@ -30,6 +30,14 @@
 
 * { box-sizing: border-box; }
 
+html {
+  scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+}
+
 html, body {
   margin: 0;
   padding: 0;
@@ -379,4 +387,356 @@ html, body {
 
 @media (prefers-reduced-motion: reduce) {
   .reveal { opacity: 1; transform: none; transition: none; }
+}
+
+/* ═══════════════════════════════════════════════════════════
+   Issue page (issue-N.html) — the rich web archive version of
+   a newsletter issue. Wider than the landing page, charts +
+   photos allowed, but same beige/Pinyon/Cormorant palette.
+   ═══════════════════════════════════════════════════════════ */
+
+.issue-page {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: var(--space-4) var(--space-3) var(--space-5);
+}
+
+/* ─── Issue header ─────────────────────────────────────────── */
+
+.issue-header {
+  margin-bottom: var(--space-6);
+}
+
+.back-link {
+  display: inline-block;
+  font-family: var(--font-display);
+  font-size: 1.7rem;
+  color: var(--text);
+  text-decoration: none;
+  letter-spacing: 0.02em;
+  margin-bottom: var(--space-4);
+  transition: color 0.2s ease;
+}
+
+.back-link:hover { color: var(--accent); }
+
+.issue-stamp {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.14em;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  margin-bottom: var(--space-3);
+  padding-bottom: var(--space-2);
+  border-bottom: 1px solid var(--border);
+}
+
+.issue-headline {
+  font-family: var(--font-body);
+  font-weight: 500;
+  font-size: 2.4rem;
+  line-height: 1.15;
+  color: var(--text);
+  margin: 0 0 0.5rem;
+}
+
+.issue-lede {
+  font-family: var(--font-body);
+  font-style: italic;
+  font-size: 1.35rem;
+  line-height: 1.5;
+  color: var(--text-soft);
+  margin: 0 0 var(--space-4);
+}
+
+/* Listen button */
+
+.listen-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.75rem 1.5rem;
+  background: var(--bg);
+  border: 1px solid var(--accent);
+  color: var(--text);
+  text-decoration: none;
+  font-family: var(--font-body);
+  font-size: 1rem;
+  letter-spacing: 0.04em;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+.listen-button:hover {
+  background: var(--accent);
+  color: var(--bg);
+}
+
+.listen-icon { color: var(--accent); font-size: 1rem; }
+.listen-button:hover .listen-icon { color: var(--bg); }
+
+.listen-meta {
+  font-style: italic;
+  font-size: 0.9rem;
+  color: var(--text-muted);
+}
+
+.listen-button:hover .listen-meta { color: var(--bg); }
+
+/* ─── Today's brief / TLDR ─────────────────────────────────── */
+
+.tldr {
+  margin-bottom: var(--space-6);
+  padding: var(--space-4) 0;
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+}
+
+.tldr-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.tldr-li {
+  padding: var(--space-2) 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.tldr-li:last-child {
+  border-bottom: none;
+}
+
+.tldr-item {
+  display: flex;
+  gap: var(--space-3);
+  align-items: flex-start;
+  text-decoration: none;
+  color: inherit;
+  padding: var(--space-1) 0;
+  transition: opacity 0.2s ease;
+}
+
+.tldr-item:hover { opacity: 0.7; }
+.tldr-item:hover .tldr-headline {
+  color: var(--accent);
+  border-bottom-color: var(--accent);
+}
+
+.tldr-num {
+  flex-shrink: 0;
+  font-family: var(--font-display);
+  font-size: 2.4rem;
+  line-height: 1;
+  color: var(--text-muted);
+  width: 40px;
+  text-align: center;
+  padding-top: 4px;
+}
+
+.tldr-body {
+  flex: 1;
+  min-width: 0;
+}
+
+.tldr-meta {
+  display: inline-block;
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  letter-spacing: 0.16em;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  margin-bottom: 4px;
+}
+
+.tldr-headline {
+  font-family: var(--font-body);
+  font-weight: 500;
+  font-size: 1.25rem;
+  line-height: 1.3;
+  color: var(--text);
+  margin: 0 0 4px;
+  display: inline-block;
+  border-bottom: 1px solid transparent;
+  transition: color 0.2s ease, border-color 0.2s ease;
+  padding-bottom: 2px;
+}
+
+.tldr-desc {
+  font-size: 1rem;
+  line-height: 1.55;
+  color: var(--text-soft);
+  margin: 0;
+}
+
+/* ─── Stories ──────────────────────────────────────────────── */
+
+.story {
+  margin-bottom: var(--space-6);
+  padding-bottom: var(--space-5);
+  border-bottom: 1px solid var(--border);
+  scroll-margin-top: var(--space-3);
+}
+
+.story:last-of-type {
+  border-bottom: none;
+}
+
+.story-eyebrow {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.16em;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  margin-bottom: var(--space-2);
+}
+
+.story-title {
+  font-family: var(--font-body);
+  font-weight: 500;
+  font-size: 1.85rem;
+  line-height: 1.2;
+  color: var(--text);
+  margin: 0 0 var(--space-3);
+}
+
+.story-body {
+  font-size: 1.15rem;
+  line-height: 1.75;
+  color: var(--text);
+  margin: 0 0 var(--space-3);
+}
+
+.story-body strong {
+  font-weight: 600;
+  color: var(--text);
+  letter-spacing: 0.01em;
+}
+
+.story-sources {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  letter-spacing: 0.06em;
+  color: var(--text-muted);
+  margin: var(--space-2) 0 0;
+}
+
+.story-sources a {
+  color: var(--text-soft);
+  text-decoration: none;
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 1px;
+  transition: color 0.2s ease, border-color 0.2s ease;
+}
+
+.story-sources a:hover {
+  color: var(--accent);
+  border-bottom-color: var(--accent);
+}
+
+/* ─── Charts / figures ─────────────────────────────────────── */
+
+.story-chart,
+.story-photo {
+  margin: var(--space-4) 0;
+  text-align: center;
+}
+
+.chart-eyebrow {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  letter-spacing: 0.16em;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  margin-bottom: var(--space-2);
+  text-align: left;
+}
+
+.chart-svg {
+  width: 100%;
+  max-width: 480px;
+  height: auto;
+  display: block;
+  margin: 0;
+}
+
+.chart-source {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  letter-spacing: 0.04em;
+  color: var(--text-muted);
+  margin-top: var(--space-1);
+  text-align: left;
+  font-style: italic;
+}
+
+.photo-placeholder {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  aspect-ratio: 16 / 9;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: var(--space-3);
+  font-family: var(--font-body);
+  font-style: italic;
+  font-size: 1rem;
+  color: var(--text-muted);
+  margin-bottom: var(--space-1);
+}
+
+/* ─── Kicker (closing question) ────────────────────────────── */
+
+.kicker {
+  text-align: center;
+  margin: var(--space-5) 0 var(--space-6);
+  padding: var(--space-4) 0;
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+}
+
+.kicker p {
+  font-family: var(--font-body);
+  font-style: italic;
+  font-size: 1.35rem;
+  line-height: 1.55;
+  color: var(--text);
+  margin: 0;
+  max-width: 540px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* ─── Issue-page signup CTA ────────────────────────────────── */
+
+.issue-signup {
+  text-align: center;
+  margin-bottom: var(--space-5);
+}
+
+.cta-line {
+  font-family: var(--font-body);
+  font-size: 1.1rem;
+  color: var(--text);
+  margin: 0 0 var(--space-3);
+}
+
+/* ─── Mobile tweaks for issue page ─────────────────────────── */
+
+@media (max-width: 640px) {
+  .issue-page { padding: var(--space-3) var(--space-2) var(--space-4); }
+  .issue-headline { font-size: 1.8rem; }
+  .issue-lede { font-size: 1.15rem; }
+  .story-title { font-size: 1.4rem; }
+  .story-body { font-size: 1.05rem; }
+  .kicker p { font-size: 1.1rem; }
+  .listen-button { font-size: 0.95rem; padding: 0.65rem 1.2rem; }
+  .listen-meta { display: none; }
+  .tldr-num { font-size: 2rem; width: 32px; }
+  .tldr-headline { font-size: 1.1rem; }
+  .tldr-desc { font-size: 0.95rem; }
+  .tldr-item { gap: var(--space-2); }
 }
