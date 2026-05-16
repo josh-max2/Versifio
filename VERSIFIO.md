@@ -53,23 +53,36 @@ fade-in on scroll.
 │   Subtle horizontal rule
 │
 ├─ Promise
-│   3-4 sentences. Who it's for, what they get, cadence.
+│   2-3 sentences. Who it's for, what they get, cadence.
+│
+├─ What you get  ─── eyebrow + 4 em-dash bullets
+│   Concrete: how many stories, how often, sources, free
+│
+├─ Recent issues  ─── eyebrow + 3 stacked rows
+│   Per row: date + issue # (mono caps, justified),
+│            title (1.55rem serif), one-line summary.
+│   Hairline divider between rows. Currently HARDCODED
+│   placeholder content — swap for real once newsletter exists.
+│
+├─ Pull quote
+│   One italic passage between top/bottom hairlines.
+│   Cite line below. Acts as "voice sample."
 │
 ├─ Signup
 │   Email input + button. No Beehiiv yet — endpoint TBD.
-│   Tiny privacy note below.
-│
-├─ Sample (TODO once newsletter exists)
-│   Most-recent issue preview OR most-recent video card.
-│   Proves cadence to a first-time visitor.
+│   Moved DOWN after the proof on purpose — converts better
+│   once a visitor has sampled the content.
 │
 ├─ About (single paragraph)
-│   Who runs this. Honest. No "AI-powered" buzz — describe what you
-│   actually do.
+│   Who runs this. Honest. No "AI-powered" buzz.
 │
 └─ Footer
-    Sources / contact / one-line copyright. No nav clutter.
+    One-line copyright. No nav clutter.
 ```
+
+Shared `.section-title` class drives the eyebrow look on every
+section (muted, uppercase, 0.22em tracking, centered). Don't add
+per-section h2 styles — extend `.section-title` if needed.
 
 ## What it ISN'T (anti-scope)
 
@@ -133,3 +146,11 @@ up) so each channel's funnel is measurable in dashboard analytics.
   launches on github.io subdomain. `CNAME` file removed. Mailto link
   in footer removed (email address doesn't exist). All-internal
   references updated to the github.io URL.
+- **2026-05-16 (later still)** — three new sections shipped: "What
+  you get" (em-dash bullets), "Recent issues" (3 hardcoded
+  placeholder rows with date/issue#/title/summary, hairline dividers),
+  and a centered pull quote between top/bottom hairlines. Signup
+  moved below the proof. Refactored eyebrow styling to a shared
+  `.section-title` class. Placeholder issue copy uses real
+  brand-vertical topics (wheat/Boeing/Fed) so the voice calibration
+  is correct when real issues replace it.

@@ -177,19 +177,138 @@ html, body {
 
 /* ─── About ────────────────────────────────────────────────── */
 
+/* Shared eyebrow / section title — muted, tracked, uppercase. Used
+   on every section that introduces a content block. */
+.section-title {
+  font-family: var(--font-body);
+  font-weight: 500;
+  font-size: 0.85rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  margin: 0 0 var(--space-3);
+  text-align: center;
+}
+
+/* ─── What you get ─────────────────────────────────────────── */
+
+.bullets {
+  margin-bottom: var(--space-6);
+  text-align: center;
+}
+
+.bullets-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: inline-block;
+  text-align: left;
+}
+
+.bullets-list li {
+  position: relative;
+  padding-left: 1.6em;
+  font-size: 1.1rem;
+  line-height: 1.9;
+  color: var(--text);
+}
+
+.bullets-list li::before {
+  content: "—";
+  position: absolute;
+  left: 0;
+  color: var(--text-muted);
+}
+
+/* ─── Recent issues ────────────────────────────────────────── */
+
+.issues {
+  margin-bottom: var(--space-6);
+}
+
+.issue {
+  padding: var(--space-3) 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.issue:first-of-type {
+  padding-top: var(--space-2);
+}
+
+.issue:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.issue-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.12em;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  margin-bottom: var(--space-1);
+}
+
+.issue-title {
+  font-family: var(--font-body);
+  font-weight: 500;
+  font-size: 1.55rem;
+  line-height: 1.25;
+  margin: 0 0 0.5rem;
+  color: var(--text);
+}
+
+.issue-summary {
+  font-size: 1.05rem;
+  line-height: 1.6;
+  color: var(--text-soft);
+  margin: 0;
+}
+
+/* ─── Pull quote ───────────────────────────────────────────── */
+
+.pullquote {
+  margin-bottom: var(--space-6);
+  text-align: center;
+}
+
+.pullquote blockquote {
+  margin: 0 auto;
+  max-width: 540px;
+  padding: var(--space-4) var(--space-2);
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+}
+
+.pullquote p {
+  font-family: var(--font-body);
+  font-style: italic;
+  font-size: 1.45rem;
+  line-height: 1.5;
+  color: var(--text);
+  margin: 0 0 var(--space-2);
+}
+
+.pullquote cite {
+  display: block;
+  font-style: normal;
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  letter-spacing: 0.04em;
+}
+
+.pullquote cite em {
+  font-style: italic;
+}
+
+/* ─── About ────────────────────────────────────────────────── */
+
 .about {
   text-align: center;
   margin-bottom: var(--space-5);
-}
-
-.about h2 {
-  font-family: var(--font-body);
-  font-weight: 500;
-  font-size: 0.95rem;
-  letter-spacing: 0.18em;
-  text-transform: uppercase;
-  color: var(--text-muted);
-  margin: 0 0 var(--space-2);
 }
 
 .about p {
@@ -197,6 +316,15 @@ html, body {
   color: var(--text);
   max-width: 520px;
   margin: 0 auto;
+}
+
+/* ─── Mobile tweaks for new sections ───────────────────────── */
+
+@media (max-width: 600px) {
+  .issue-title { font-size: 1.3rem; }
+  .pullquote p { font-size: 1.2rem; }
+  .pullquote blockquote { padding: var(--space-3) var(--space-1); }
+  .issue-meta { font-size: 0.7rem; }
 }
 
 /* ─── Footer ───────────────────────────────────────────────── */
