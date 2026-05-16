@@ -2,8 +2,13 @@
 
 The destination page for traffic from the 4 short-form video brands
 (@ander__all, @crash_magnet, @GridIronCourt, @ander__uplift). Hosted
-at **versif.io**. Repo: `josh-max2/Versifio`. Local clone:
-`C:\Users\joshs\Desktop\Versifio-deploy`.
+on GitHub Pages at **https://josh-max2.github.io/Versifio/**. Repo:
+`josh-max2/Versifio`. Local clone: `C:\Users\joshs\Desktop\Versifio-deploy`.
+
+(`versif.io` is the aspirational brand domain but has not been
+purchased. Adding it later = buy the domain, drop a `CNAME` file
+back into the repo root, configure DNS, re-tick HTTPS in repo Pages
+settings.)
 
 This file is the design + content spec. Internal — not deployed.
 
@@ -77,14 +82,18 @@ fade-in on scroll.
 
 ## Deployment
 
-GitHub Pages → custom domain **versif.io**.
-- `CNAME` file at repo root contains `versif.io`
-- DNS: A records for GitHub Pages IPs OR CNAME flatten to
-  `josh-max2.github.io`
-- Enable Pages in repo Settings → Pages → Source: `main` branch
+GitHub Pages, default subdomain — no custom domain yet.
+- URL: **https://josh-max2.github.io/Versifio/**
+- Enable in repo Settings → Pages → Source: `main` branch / `(root)`
+- HTTPS auto-issued by GitHub (Let's Encrypt) for the github.io URL
 
-(Vercel path also viable, matching ReScapeUtah-deploy pattern. Choose
-one and stick to it.)
+**To add `versif.io` later** (when/if domain is purchased):
+1. Create a file named `CNAME` at repo root containing `versif.io`
+2. At the registrar, A-record `@` → 185.199.108.153 / .109.153 /
+   .110.153 / .111.153 (GitHub Pages IPs); CNAME `www` →
+   `josh-max2.github.io`
+3. Repo Settings → Pages → wait for "DNS check successful" → tick
+   "Enforce HTTPS"
 
 ## Content TODOs (gates the launch)
 
@@ -111,11 +120,16 @@ one and stick to it.)
 - `CNAME`: custom-domain pointer for GitHub Pages
 
 Cross-link from datamaker: when video renders include a bio-link CTA,
-the URL should be `https://versif.io/?utm_source=<channel>&utm_medium=<tt|yt>&utm_campaign=bio`
-so each channel's funnel is measurable in dashboard analytics.
+the URL should be `https://josh-max2.github.io/Versifio/?utm_source=<channel>&utm_medium=<tt|yt>&utm_campaign=bio`
+(swap to `https://versif.io/...` if/when the custom domain is wired
+up) so each channel's funnel is measurable in dashboard analytics.
 
 ## Decisions log
 
 - **2026-05-16** — repo created, scaffold + spec shipped. Beige
   minimalist palette + Pinyon Script wordmark chosen. No Beehiiv
   integration yet (form is visual placeholder).
+- **2026-05-16 (later)** — `versif.io` is not yet purchased; site
+  launches on github.io subdomain. `CNAME` file removed. Mailto link
+  in footer removed (email address doesn't exist). All-internal
+  references updated to the github.io URL.

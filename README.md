@@ -2,7 +2,7 @@
 
 A quieter way to read the news.
 
-Live at **[versif.io](https://versif.io)**.
+Live at **[josh-max2.github.io/Versifio](https://josh-max2.github.io/Versifio/)**.
 
 ---
 
