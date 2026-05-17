@@ -9,6 +9,49 @@ build order — what to do, in what order, and why.
 
 ---
 
+## Status (as of 2026-05-16)
+
+```
+Phase 1 ─ Static site complete                  ⏳ 1 of 5 tasks done
+   ✅ 1.2  Issue archive page template (issue-12.html)
+   ⬜ 1.1  Topic checkboxes on signup form
+   ⬜ 1.3  Archive index page (issues.html)
+   ⬜ 1.4  Open Graph + Twitter card metadata
+   ⬜ 1.5  Favicon
+
+Phase 2 ─ Pipeline auto-export                  ⬜ not started
+Phase 3 ─ Newsletter composition                ⬜ not started
+Phase 4 ─ Beehiiv wired up                      ⬜ DEFERRED
+Phase 5 ─ Topic-filter delivery                 ⬜ DEFERRED
+Phase 6 ─ Podcast RSS feed                      ⬜ OPTIONAL
+Phase 7 ─ Sponsorship                           ⬜ wait for 1K subs
+Phase 8 ─ Paid tier                             ⬜ wait for 2K subs
+```
+
+**Manual user actions also pending** (not in the phase plan but blocking):
+
+- ⬜ Enable GitHub Pages in repo settings
+  (https://github.com/josh-max2/Versifio/settings/pages → Source: main / root)
+- ⬜ Update bio links on all 7 channel handles with UTM-tagged URLs
+  - TT: `@ander__all`, `@crash_magnet`, `@GridIronCourt`, `@ander__uplift`
+  - YT: `@ander_alls`, `@c-magnet`, `@gridironcourt`
+  - URL format: `https://josh-max2.github.io/Versifio/?utm_source=<handle>&utm_medium=<tt|yt>&utm_campaign=bio`
+- ⬜ Save TT Creator Studio + YT Studio demographic screenshots to
+  `Versifio-deploy/sponsor-pack/` (the 80% / 25-44 evidence; decays as data ages)
+- ⬜ Decide: buy `versif.io` domain or stay on github.io subdomain
+
+### When you come back — start here
+
+1. **Confirm the manual actions above are done first.** No engineering work
+   matters if there's no traffic source pointed at the site.
+2. **Then resume at Phase 1.4** (Open Graph metadata) — it's the highest-leverage
+   remaining static-site task. Every shared bio link gets a clean unfurled preview.
+3. **Phase 1.1, 1.3, 1.5** can ship in any order after that. None block Phase 2.
+4. **Don't start Phase 2 (`versifio_export.py`) until Phase 1 is done** — it
+   depends on having a complete site to write into.
+
+---
+
 ## The phases at a glance
 
 ```

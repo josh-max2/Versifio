@@ -1,5 +1,12 @@
 # Versifio — site spec
 
+**Where we are (2026-05-16):** Static landing page + prototype issue
+archive page (`issue-12.html`) shipped. Editorial structure locked
+(news / why-this-matters-with-causes / what-this-means-for-you).
+TLDR section with anchor links wired. Pinyon Script + Cormorant
+Garamond brand identity established. No ESP yet — signup form is
+a visual placeholder. **See `INSTRUCTIONS.md` for what to do next.**
+
 The destination page for traffic from the 4 short-form video brands
 (@ander__all, @crash_magnet, @GridIronCourt, @ander__uplift). Hosted
 on GitHub Pages at **https://josh-max2.github.io/Versifio/**. Repo:
